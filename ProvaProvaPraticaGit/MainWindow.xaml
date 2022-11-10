@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="creaBrano_button" Content="Crea un brano" HorizontalAlignment="Left" Margin="33,99,0,0" VerticalAlignment="Top" Height="47" Width="193" Click="creaBrano_button_Click"/>
+        <TextBox x:Name="durata_txtBox" HorizontalAlignment="Left" Margin="80,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89"/>
+        <TextBlock x:Name="durata_txtBlock" HorizontalAlignment="Left" Margin="33,77,0,0" TextWrapping="Wrap" Text="Durata:" VerticalAlignment="Top" Width="42"/>
+        <TextBlock x:Name="durataInfo_txtBlock" HorizontalAlignment="Left" Margin="174,77,0,0" TextWrapping="Wrap" Text="min:sec" VerticalAlignment="Top" Width="52"/>
+        <TextBlock x:Name="autore_txtBlock" HorizontalAlignment="Left" Margin="33,54,0,0" TextWrapping="Wrap" Text="Autore:" VerticalAlignment="Top" Width="42"/>
+        <TextBlock x:Name="titolo_txtBlock" HorizontalAlignment="Left" Margin="33,31,0,0" TextWrapping="Wrap" Text="Titolo:" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="autore_txtBox" HorizontalAlignment="Left" Margin="80,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="titolo_txtBox" HorizontalAlignment="Left" Margin="80,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+        <ListBox x:Name="brani_listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="33,217,574,10"/>
+        <TextBlock x:Name="listaBrani_txtBlock" HorizontalAlignment="Left" Margin="33,196,0,0" TextWrapping="Wrap" Text="Lista brani" VerticalAlignment="Top" Width="193"/>
+        <Button x:Name="creaCD_button" Content="Crea un CD e aggiungi i brani" HorizontalAlignment="Left" Margin="335,99,0,0" VerticalAlignment="Top" Height="47" Width="193" Click="creaCD_button_Click"/>
+        <TextBlock x:Name="autore_txtBlock_Copy" HorizontalAlignment="Left" Margin="335,78,0,0" TextWrapping="Wrap" Text="Autore:" VerticalAlignment="Top" Width="42"/>
+        <TextBlock x:Name="titolo_txtBlock_Copy" HorizontalAlignment="Left" Margin="335,55,0,0" TextWrapping="Wrap" Text="Titolo:" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="autoreCD_txtBox" HorizontalAlignment="Left" Margin="382,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+        <TextBox x:Name="titoloCD_txtBox" HorizontalAlignment="Left" Margin="382,54,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="146"/>
+        <ListBox x:Name="listaCD_listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="335,217,272,10" SelectionChanged="listaCD_listBox_SelectionChanged"/>
+        <TextBlock x:Name="listaCD_txtBlock" HorizontalAlignment="Left" Margin="335,196,0,0" TextWrapping="Wrap" Text="Lista cd" VerticalAlignment="Top" Width="193"/>
+        <ListBox x:Name="listaBraniCD_listBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="533,217,74,10"/>
+        <TextBlock x:Name="Lista_brani_CD" HorizontalAlignment="Left" Margin="533,196,0,0" TextWrapping="Wrap" Text="Lista brani cd" VerticalAlignment="Top" Width="193"/>
 
     </Grid>
 </Window>
