@@ -57,7 +57,7 @@ namespace ProvaProvaPraticaGit
 
         private void creaCD_button_Click(object sender, RoutedEventArgs e)
         {
-            CD cd = new CD(titoloCD_txtBox, autoreCD_txtBox, listaBrani);
+            CD cd = new CD(listaBrani, titoloCD_txtBox.Text, autoreCD_txtBox.Text);
             listaBrani.Clear();
             brani_listBox.Items.Clear();
             listaCD_listBox.Items.Add(cd);
@@ -69,7 +69,7 @@ namespace ProvaProvaPraticaGit
         {
             try
             {
-                CD cdSel = listaCD_listBox.SelectedItem;
+                CD cdSel = (CD)listaCD_listBox.SelectedItem;
                 listaBraniCD_listBox.Items.Clear();
                 foreach (Brano b in cdSel.ListaDeiBrani)
                 {
