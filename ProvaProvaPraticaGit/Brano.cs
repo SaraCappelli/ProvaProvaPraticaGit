@@ -23,7 +23,7 @@ namespace ProvaProvaPraticaGit
         }
 
         //restituisce una stringa con gli attributi del brano
-        public string toString()
+        public override string ToString()
         {
             return Titolo.ToString() + ", " + Autore.ToString() + ", " + Durata.ToString() + ".";
         }

@@ -18,14 +18,10 @@ namespace ProvaProvaPraticaGit
             this.Titolo = Titolo;
             this.Autore = Autore;
         }
-
-        internal toString (List<Brano> ListaDeiBrani)
+       
+        public override string ToString()
         {
-            StringBuilder sb = new StringBuilder ();
-            for (int i = 0; i < ListaDeiBrani.Count; i++)
-            {
-                sb = ListaDeiBrani [i].ToString ();
-            }
+            return Titolo + " di " + Autore;
         }
     }
 }
