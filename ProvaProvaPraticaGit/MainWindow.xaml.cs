@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
+//SARA CAPPELLI 4E
+
 namespace ProvaProvaPraticaGit
 {
     /// <summary>
@@ -30,7 +33,7 @@ namespace ProvaProvaPraticaGit
         {
             try
             {
-                Brano b = new Brano(titolo_txtBox.Text, autore_txtBox.Text, MinSecToSec(durata_txtBox.Text));
+                Brano b = new Brano(NotEmptyString(titolo_txtBox.Text), NotEmptyString(autore_txtBox.Text), MinSecToSec(durata_txtBox.Text));
                 listaBrani.Add(b);
                 brani_listBox.Items.Add(b);
             } catch
@@ -39,9 +42,16 @@ namespace ProvaProvaPraticaGit
             }
         }
 
+        string NotEmptyString(string text)
+        {
+            if (text != "") return text;
+            else throw new Exception("vuoto");
+        }
+
         private int MinSecToSec(string text)
         {
-            throw new NotImplementedException();
+            string[] arr = text.Split(':');
+            return int.Parse(arr[0]) * 60 + int.Parse(arr[1]);
         }
 
 
